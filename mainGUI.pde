@@ -9,7 +9,7 @@ boolean[] isCalledOnce = {false, false, false, false};
 
 final int N_CLASS = 5;
 // 各インデックスに対応するラベル名
-final String[] index2name = {"Chino", "Cocoa", "Rise", "Shallo", "Chiyo"};
+final String[] index2name = {"Tehai", "1", "2", "3", "4"};
 boolean[] selectClassArray = new boolean[N_CLASS];  // ラジオボタンにて選択されているラベルを格納
 
 RadioButton radio;
@@ -26,7 +26,10 @@ boolean isDrawRect = false;  // 描画中かを識別するフラグ
 DataXML xml = null;
 
 void setup() {
-  size(700,600);
+  int w = 1200;
+  int h = 720;
+  //size(700,600);
+  size(1280,720);
   background(255);
   stroke(255,0,0);
   strokeWeight(3);
@@ -34,18 +37,18 @@ void setup() {
   controlP5 = new ControlP5(this);
   
   imgBtn = controlP5.addButton("LOAD IMAGE");
-  imgBtn.setValue(0).setPosition(600,40).setSize(70,30);
+  imgBtn.setValue(0).setPosition(w,40).setSize(70,30);
   
   delBtn = controlP5.addButton("DELETE RECT");
-  delBtn.setValue(1).setPosition(600,450).setSize(70,30);
+  delBtn.setValue(1).setPosition(w,450).setSize(70,30);
   
   saveBtn = controlP5.addButton("SAVE RECT");
-  saveBtn.setValue(2).setPosition(600,300).setSize(70,30);
+  saveBtn.setValue(2).setPosition(w,300).setSize(70,30);
   
   xmlBtn = controlP5.addButton("OUTPUT XML");
-  xmlBtn.setValue(3).setPosition(600,350).setSize(70,30);
+  xmlBtn.setValue(3).setPosition(w,350).setSize(70,30);
   
-  radio = controlP5.addRadioButton("radioButton", 600, 80);  // Position
+  radio = controlP5.addRadioButton("radioButton", w, 80);  // Position
   radio.setSize(30, 30).setColorLabel(color(0));
   radio.addItem(index2name[0], 1);
   radio.addItem(index2name[1], 2);
@@ -99,7 +102,7 @@ void draw() {
 }
 
 void mousePressed(){
-  if (mouseX > 600){
+  if (mouseX > 1150){
     return;
   }
   
