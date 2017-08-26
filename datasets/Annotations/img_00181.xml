@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <annotation>
   <folder>-</folder>
-  <filename>img_00177.png</filename>
+  <filename>img_00181.png</filename>
   <source>
     <database>mj-algorithm</database>
     <annotation>OSSC Devcamp 2017</annotation>
@@ -24,21 +24,9 @@
     <truncated>0</truncated>
     <difficult>1</difficult>
     <bndbox>
-      <xmin>136</xmin>
-      <ymin>185</ymin>
-      <xmax>482</xmax>
-      <ymax>253</ymax>
-    </bndbox>
-  </object>
-  <object>
-    <name>Tehai</name>
-    <pose>Unspecified</pose>
-    <truncated>0</truncated>
-    <difficult>1</difficult>
-    <bndbox>
-      <xmin>132</xmin>
-      <ymin>183</ymin>
-      <xmax>483</xmax>
+      <xmin>148</xmin>
+      <ymin>167</ymin>
+      <xmax>519</xmax>
       <ymax>258</ymax>
     </bndbox>
   </object>
