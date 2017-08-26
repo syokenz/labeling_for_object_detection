@@ -25,6 +25,8 @@ boolean isDrawRect = false;  // 描画中かを識別するフラグ
 
 DataXML xml = null;
 
+String dir = null;
+
 void setup() {
   int w = 1200;
   int h = 720;
@@ -126,7 +128,17 @@ void deleteRect(){
 void controlEvent(ControlEvent theEvent) {
   if(theEvent.getName() == "LOAD IMAGE"){
     if (throwOnce(0)) return;
-    getFile = getFileName();
+    if(dir == null){
+      //dirがしていない場合はhomeをファイル選択画面のrootディレクトリにする
+      System.out.println("dir is null ");
+      getFile = getFileName("~");
+      //選んだファイルをもとにrootディレクトリを変更
+      dir = nowFile.substring(0,nowFile.lastIndexOf('/') );
+      System.out.println("set dir=" + dir);
+    }else{
+      getFile = getFileName(dir);
+      //System.out.println("dir: " + dir);
+    }
   }else if(theEvent.getName() == "DELETE RECT"){
     if (throwOnce(1)) return;
     deleteRect(); // 矩形の削除
@@ -164,8 +176,14 @@ void controlEvent(ControlEvent theEvent) {
     if(xml != null){
       String imgFileName = nowFile.substring(nowFile.lastIndexOf('/') + 1);
       String imgName = imgFileName.substring(0, imgFileName.lastIndexOf('.'));
-      xml.saveNewXML(imgName + ".xml");
-      println("successful to save");
+      String xmlPath;
+      if( dir == null){
+        xmlPath = imgName + ".xml";
+      }else{
+        xmlPath = dir + "/" + imgName + ".xml";
+      }
+      xml.saveNewXML(xmlPath);
+      println("save " + xmlPath);
     }
   }else if(theEvent.isFrom(radio)) {
     for (int i = 0; i < theEvent.getGroup().getArrayValue().length; i++){

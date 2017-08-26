@@ -1,13 +1,13 @@
 import javax.swing.*;
 
 //ファイル選択画面、選択ファイルパス取得の処理 
-String getFileName(){
+String getFileName(final String dir){
   //処理タイミングの設定 
   SwingUtilities.invokeLater(new Runnable() { 
     public void run() {
       try {
         //ファイル選択画面表示 
-        JFileChooser fc = new JFileChooser(); 
+        JFileChooser fc = new JFileChooser(dir); 
         int returnVal = fc.showOpenDialog(null);
         //「開く」ボタンが押された場合
         if (returnVal == JFileChooser.APPROVE_OPTION) {
