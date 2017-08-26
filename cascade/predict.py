@@ -13,7 +13,7 @@ if len(sys.argv) != 3:
     print("Usage : python predict.py (input image path) (output dir)")
     sys.exit(1)
 
-model = 'result/cascade.xml'
+model = 'model/cascade.xml'
 in_image_path = sys.argv[1]
 out_image_dir = sys.argv[2]
 
