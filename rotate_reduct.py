@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# 画像を回転して小さくする
+# 画像の回転を戻す
 # 
 import numpy as np
 import cv2

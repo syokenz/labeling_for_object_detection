@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
+#
+# カスケード分類器のモデルを使って、手牌のいちを当てる
+# 使い方
 #
 # for fn in `find input_dir/`
 #   do python $fn out_dir
 # done
-#
 #
 # http://shkh.hatenablog.com/entry/2012/11/03/052251
 import cv2

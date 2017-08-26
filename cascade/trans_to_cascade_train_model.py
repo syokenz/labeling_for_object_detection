@@ -1,13 +1,18 @@
+# -*- coding: utf-8 -*-
+#
+# SSD向けに作った学習データ(XML)をOpenCVのカスケード分析ように変換する
+# 使い方
 #
 # for fn in `ls datasets/Annotations/`
 # do
-#   python hoge.py datasets/Annotations/$fn >> info.dat 2>> bg.txt
+#   python trans_to_cascade_train_model.py datasets/Annotations/$fn >> info.dat 2>> bg.txt
 # done  
+#
+# http://shkh.hatenablog.com/entry/2012/11/03/052251
 #
 import xml.etree.ElementTree as ET
 import sys
 
-#XmlData = open("datasets/Annotations/img_00111.xml").read()
 xmlpath = sys.argv[1]
 imgpath = xmlpath.replace("xml","png").replace("Annotations","JPEGImages")
 try:
