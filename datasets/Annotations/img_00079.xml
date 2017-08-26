@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation>
+  <folder>-</folder>
+  <filename>img_00079.png</filename>
+  <source>
+    <database>mj-algorithm</database>
+    <annotation>OSSC Devcamp 2017</annotation>
+    <image>mondo</image>
+    <flickrid>-</flickrid>
+  </source>
+  <owner>
+    <flickrid>-</flickrid>
+    <name>mj-algorithm</name>
+  </owner>
+  <size>
+    <width>640</width>
+    <height>360</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>Tehai</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>1</difficult>
+    <bndbox>
+      <xmin>131</xmin>
+      <ymin>165</ymin>
+      <xmax>498</xmax>
+      <ymax>258</ymax>
+    </bndbox>
+  </object>
+</annotation>
