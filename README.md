@@ -14,7 +14,9 @@ R−CNNやYOLO, SSDなど、画像の”どこ”に”何”があるかを識�
 1. git clone https://github.com/syokenz/labeling_for_object_detection.git
 2. mv labeling_for_object_detection mainGUI
 3. Download Processing http://download.processing.org/processing-3.3.5-macosx.zip
-4. Open Processing and open mainGUI/mainGUI.pde
+4. Open Processing
+5. Sketch > ImportLibrary > addLibrary ControlP5
+6. Open mainGUI/mainGUI.pde
 
 ## Demo
 
